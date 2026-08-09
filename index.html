@@ -2,13 +2,23 @@
 <html lang="es">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VT89YTSMS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1VT89YTSMS');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="FotoLive permite recibir, moderar y proyectar fotos y mensajes de invitados en tiempo real, y descargar todo el contenido como recuerdo del evento.">
   <meta property="og:title" content="FotoLive! | Fotos en vivo. Recuerdos al instante.">
   <meta property="og:description"
-    content="Tus invitados comparten fotos y mensajes desde su celular. Vos moderás, proyectás y descargás todos esos recuerdos al finalizar el evento.">
+    content="Tus invitados comparten fotos y mensajes desde su celular. Vos moderás, proyectás y descargás todos esos recuerdos al finalizar.">
   <meta property="og:image" content="https://www.fotolive.com.ar/assets/logo-fotolive.webp">
   <meta name="theme-color" content="#090d1b">
   <title>FotoLive! | Fotos en vivo. Recuerdos al instante.</title>
@@ -321,81 +331,66 @@
   <footer>
     <div class="container footer-grid">
 
-  <div class="footer-brand">
-    <img
-      src="assets/logo-fotolive.webp"
-      alt="Logo FotoLive"
-    />
+      <div class="footer-brand">
+        <img src="assets/logo-fotolive.webp" alt="Logo FotoLive" />
 
-    <div>
-      <strong>FotoLive!</strong>
-      <small>
-        Fotos en vivo. Recuerdos al instante.
-      </small>
+        <div>
+          <strong>FotoLive!</strong>
+          <small>
+            Fotos en vivo. Recuerdos al instante.
+          </small>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <strong class="footer-title">Información</strong>
+
+        <a href="#como">Cómo funciona</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#demo">Demo</a>
+        <a href="#faq">Preguntas frecuentes</a>
+      </div>
+
+      <div class="footer-column">
+        <strong class="footer-title">Legal</strong>
+
+        <a href="legal/privacidad.html">
+          Política de Privacidad
+        </a>
+
+        <a href="legal/terminos.html">
+          Términos y Condiciones
+        </a>
+
+        <a href="legal/moderacion.html">
+          Política de Moderación
+        </a>
+
+        <a href="legal/aviso-legal.html">
+          Aviso Legal
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <strong class="footer-title">Contacto</strong>
+
+        <a href="https://wa.me/5492983340902" target="_blank" rel="noopener">
+          WhatsApp: 2983 34-0902
+        </a>
+
+        <a href="https://instagram.com/dariocabrera.dev" target="_blank" rel="noopener">
+          @dariocabrera.dev
+        </a>
+
+        <p>
+          Desarrollado por
+          <a href="https://dariocabrera-dev.netlify.app/" target="_blank" rel="noopener">
+            <strong>DC Web</strong>
+          </a>
+        </p>
+      </div>
+
     </div>
-  </div>
-
-  <div class="footer-column">
-    <strong class="footer-title">Información</strong>
-
-    <a href="#como">Cómo funciona</a>
-    <a href="#beneficios">Beneficios</a>
-    <a href="#demo">Demo</a>
-    <a href="#faq">Preguntas frecuentes</a>
-  </div>
-
-  <div class="footer-column">
-    <strong class="footer-title">Legal</strong>
-
-    <a href="legal/privacidad.html">
-      Política de Privacidad
-    </a>
-
-    <a href="legal/terminos.html">
-      Términos y Condiciones
-    </a>
-
-    <a href="legal/moderacion.html">
-      Política de Moderación
-    </a>
-
-    <a href="legal/aviso-legal.html">
-      Aviso Legal
-    </a>
-  </div>
-
-  <div class="footer-column">
-    <strong class="footer-title">Contacto</strong>
-
-    <a
-      href="https://wa.me/5492983340902"
-      target="_blank"
-      rel="noopener"
-    >
-      WhatsApp: 2983 34-0902
-    </a>
-
-    <a
-      href="https://instagram.com/dariocabrera.dev"
-      target="_blank"
-      rel="noopener"
-    >
-      @dariocabrera.dev
-    </a>
-
-    <p>
-      Desarrollado por
-      <a
-        href="https://dariocabrera-dev.netlify.app/"
-        target="_blank"
-        rel="noopener"
-      >
-        <strong>DC Web</strong>
-      </a>
-    </p>
-  </div>
-
-</div>
 
     <div class="container copyright">© <span id="year"></span> FotoLive! Todos los derechos reservados.</div>
   </footer>
