@@ -37,7 +37,7 @@
       <nav>
         <a href="#como">Cómo funciona</a><a href="#beneficios">Beneficios</a><a href="#publico">Para quién es</a><a
           href="#demo">Demo</a><a href="#faq">Preguntas</a>
-        <a class="login" href="https://fotoenvivo.netlify.app/" target="_blank" rel="noopener">Portal de clientes</a>
+        <a class="login" href="https://fotoenvivo.netlify.app/" target="_blank" rel="noopener" onclick="trackEvent('portal_clientes', { ubicacion: 'cta_final' })">Portal de clientes</a>
       </nav>
     </div>
   </header>
@@ -53,13 +53,13 @@
           <div class="actions">
             <a class="btn primary"
               href="https://wa.me/5492983340902?text=Hola%20Dario,%20quiero%20solicitar%20una%20demo%20de%20FotoLive!"
-              target="_blank" rel="noopener">Solicitar una demo</a>
-            <a class="btn secondary" href="https://fotoenvivo.netlify.app/" target="_blank" rel="noopener">Portal de
+              target="_blank" rel="noopener" onclick="trackEvent('solicitar_demo', { ubicacion: 'hero' })">Solicitar una demo</a>
+            <a class="btn secondary" href="https://fotoenvivo.netlify.app/" target="_blank" rel="noopener" onclick="trackEvent('portal_clientes', { ubicacion: 'hero' })">Portal de
               clientes</a>
           </div>
           <p class="login-note">
             ¿Todavía no tenés una cuenta?
-            <a href="https://wa.me/5492983340902" target="_blank">
+            <a href="https://wa.me/5492983340902" target="_blank" onclick="trackEvent('contacto_whatsapp', { ubicacion: 'hero_nota' })">
               Contactanos por WhatsApp
             </a>
             para configurar tu evento y recibir tus credenciales.
@@ -124,7 +124,7 @@
               <li>Experiencia rápida y sencilla.</li>
             </ul>
             <a class="btn primary demo-button" href="https://fotoenvivo.netlify.app/e/fiesta-demo" target="_blank"
-              rel="noopener">Probar como invitado</a>
+              rel="noopener" onclick="trackEvent('probar_demo_invitado')">Probar como invitado</a>
           </article>
           <article class="demo-card demo-card-pro reveal">
             <div class="demo-card-top"><span class="demo-badge">Panel profesional</span>
@@ -141,7 +141,7 @@
               <li>Vista previa del flujo profesional.</li>
             </ul>
             <a class="btn secondary demo-button" href="https://fotoenvivo.netlify.app/demo" target="_blank"
-              rel="noopener">
+              rel="noopener" onclick="trackEvent('probar_demo_organizador')">
               Conocer el panel demo
             </a>
           </article>
@@ -150,7 +150,7 @@
           <p>Esta es una experiencia de demostración. Para configurar un evento real, recibir credenciales y
             personalizar FotoLive, contactanos por WhatsApp.</p><a
             href="https://wa.me/5492983340902?text=Hola%20Dario,%20estuve%20probando%20la%20demo%20de%20FotoLive%20y%20quiero%20más%20información."
-            target="_blank" rel="noopener">Quiero FotoLive para mi evento</a>
+            target="_blank" rel="noopener" onclick="trackEvent('contacto_whatsapp', { ubicacion: 'demo_cta' })">Quiero FotoLive para mi evento</a>
         </div>
       </div>
     </section>
@@ -320,14 +320,14 @@
         </div>
         <div class="actions"><a class="btn primary"
             href="https://wa.me/5492983340902?text=Hola%20Dario,%20quiero%20conocer%20FotoLive!" target="_blank"
-            rel="noopener">Hablar por WhatsApp</a><a class="btn secondary" href="https://fotoenvivo.netlify.app/"
-            target="_blank" rel="noopener">Portal de clientes</a></div>
+            rel="noopener" onclick="trackEvent('contacto_whatsapp', { ubicacion: 'cta_final' })">Hablar por WhatsApp</a><a class="btn secondary" href="https://fotoenvivo.netlify.app/"
+            target="_blank" rel="noopener" onclick="trackEvent('portal_clientes', { ubicacion: 'cta_final' })">Portal de clientes</a></div>
       </div>
     </section>
   </main>
 
   <a class="wa" href="https://wa.me/5492983340902?text=Hola%20Dario,%20quiero%20conocer%20FotoLive!" target="_blank"
-    rel="noopener" aria-label="WhatsApp">WA</a>
+    rel="noopener" aria-label="WhatsApp" onclick="trackEvent('contacto_whatsapp', { ubicacion: 'boton_flotante' })">WA</a>
   <footer>
     <div class="container footer-grid">
 
@@ -374,7 +374,7 @@
       <div class="footer-column">
         <strong class="footer-title">Contacto</strong>
 
-        <a href="https://wa.me/5492983340902" target="_blank" rel="noopener">
+        <a href="https://wa.me/5492983340902" target="_blank" rel="noopener" onclick="trackEvent('contacto_whatsapp', { ubicacion: 'footer' })">
           WhatsApp: 2983 34-0902
         </a>
 
@@ -394,6 +394,15 @@
 
     <div class="container copyright">© <span id="year"></span> FotoLive! Todos los derechos reservados.</div>
   </footer>
+
+  <script>
+    // Google Analytics - eventos personalizados
+    function trackEvent(eventName, params = {}) {
+      if (typeof gtag === "function") {
+        gtag("event", eventName, params);
+      }
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 
