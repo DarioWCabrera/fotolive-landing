@@ -1321,3 +1321,354 @@ footer {
         padding-left: 0
     }
 }
+/* =========================================================
+   FOTO LIVE V2 — IA + CONTRATACIÓN ONLINE
+========================================================= */
+
+.flow-cards .card {
+    min-height: 290px;
+}
+
+/* =========================
+   MODERACIÓN CON IA
+========================= */
+
+.intelligence-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 18% 50%,
+            rgba(143, 61, 255, .14),
+            transparent 30%
+        );
+}
+
+.intelligence-grid {
+    display: grid;
+    grid-template-columns: .95fr 1.05fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.intelligence-grid h2 {
+    margin-top: 15px;
+    font-size: clamp(2.4rem, 4.7vw, 4.8rem);
+    line-height: 1.03;
+    letter-spacing: -.055em;
+}
+
+.intelligence-grid p {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 1.02rem;
+}
+
+.ai-points {
+    display: grid;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.ai-points span {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 16px;
+
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .035);
+
+    color: #dce3f1;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+/* panel derecho */
+
+.ai-visual {
+    position: relative;
+
+    display: grid;
+    align-content: center;
+    gap: 14px;
+
+    min-height: 470px;
+    padding: 48px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 34px;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(143, 61, 255, .30),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(25, 200, 242, .10),
+            transparent 32%
+        ),
+        #0c1226;
+
+    box-shadow: var(--shadow);
+}
+
+.ai-visual::before {
+    content: "";
+
+    position: absolute;
+    width: 280px;
+    height: 280px;
+
+    top: -140px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 45, 135, .13);
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+.ai-orb {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    place-items: center;
+
+    width: 105px;
+    height: 105px;
+
+    margin: 0 auto 20px;
+
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 50%;
+
+    background: var(--grad);
+
+    color: white;
+
+    font-size: 2rem;
+    font-weight: 900;
+
+    box-shadow:
+        0 0 45px rgba(143, 61, 255, .40),
+        0 20px 50px rgba(0, 0, 0, .25);
+}
+
+.ai-step {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    gap: 3px;
+
+    padding: 18px 20px;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, .055);
+
+    backdrop-filter: blur(10px);
+}
+
+.ai-step b {
+    font-size: 1rem;
+}
+
+.ai-step small {
+    color: var(--muted);
+    font-size: .8rem;
+}
+
+.ai-step.approved {
+    border-color: rgba(68, 224, 139, .32);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(68, 224, 139, .09),
+            rgba(255, 255, 255, .035)
+        );
+}
+
+.ai-step.review {
+    border-color: rgba(255, 196, 87, .35);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 196, 87, .08),
+            rgba(255, 255, 255, .035)
+        );
+}
+
+/* =========================
+   CONTRATACIÓN / ACTIVACIÓN
+========================= */
+
+.purchase-panel {
+    display: grid;
+    grid-template-columns: .95fr 1.05fr;
+    gap: 60px;
+    align-items: center;
+
+    padding: 60px;
+
+    border: 1px solid var(--border);
+    border-radius: 34px;
+
+    background:
+        radial-gradient(
+            circle at 88% 20%,
+            rgba(25, 200, 242, .15),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 8% 90%,
+            rgba(255, 45, 135, .16),
+            transparent 30%
+        ),
+        #10172d;
+
+    box-shadow: var(--shadow);
+}
+
+.purchase-panel h2 {
+    margin-top: 15px;
+
+    font-size: clamp(2.4rem, 4.7vw, 4.8rem);
+
+    line-height: 1.03;
+    letter-spacing: -.055em;
+}
+
+.purchase-panel p {
+    margin-top: 18px;
+    color: var(--muted);
+}
+
+.purchase-panel .btn {
+    margin-top: 30px;
+}
+
+.timeline {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr);
+
+    gap: 14px;
+    align-items: center;
+}
+
+.timeline div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 190px;
+    padding: 22px;
+
+    border: 1px solid var(--border);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, .05);
+}
+
+.timeline b {
+    color: var(--cyan);
+
+    font-size: .7rem;
+    letter-spacing: .14em;
+}
+
+.timeline strong {
+    margin-top: 8px;
+    font-size: 1.15rem;
+}
+
+.timeline span {
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+.timeline i {
+    color: #8995ad;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1020px) {
+    .intelligence-grid,
+    .purchase-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-visual {
+        max-width: 700px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .timeline {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .ai-visual {
+        min-height: auto;
+        padding: 32px 22px;
+        border-radius: 26px;
+    }
+
+    .ai-orb {
+        width: 85px;
+        height: 85px;
+        font-size: 1.6rem;
+    }
+
+    .purchase-panel {
+        padding: 34px 22px;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline i {
+        text-align: center;
+        transform: rotate(90deg);
+    }
+
+    .timeline div {
+        min-height: auto;
+    }
+
+    .flow-cards {
+        grid-template-columns: 1fr;
+    }
+}
